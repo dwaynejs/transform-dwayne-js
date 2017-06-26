@@ -38,17 +38,17 @@ console.log(transformDwayneJs(js));
 //   export default class MyBlock extends Block {
 //     static html = (_tmpl = [
 //       {
-//         type: 'div',
+//         type: "div",
 //         children: [
 //           {
-//             type: '#text',
+//             type: "#text",
 //             value: function (_) {
-//               return _.value;
+//               return _.text;
 //             }
 //           }
 //         ]
 //       }
-//     ], _tmpl.vars = ["value"], _tmpl);
+//     ], _tmpl.vars = ["text"], _tmpl);
 //   }`,
 //   map: { ... }
 // }
@@ -58,7 +58,7 @@ console.log(transformDwayneJs(js));
 
 ```
 transformDwayneJs(code: string, options?: {
-  unscopables?: string[] = ['reauire'],
+  unscopables?: string[] = ['require'],
   transformEmbeddedHtml?: boolean = true,
   transformEmbeddedScopelessHtml?: boolean = true,
   transformEmbeddedJs?: boolean = true,
@@ -69,9 +69,8 @@ transformDwayneJs(code: string, options?: {
   sourceMap?: boolean = true,
   inputSourceMap?: SourceMap | null = null,
   filename?: string = 'unknown',
-  indent?: number | 'string' = 2,
-  useES6?: boolean = false,
-  ...optionsThatArePassedToHtmlTransformer
+  indent?: number | string = 2,
+  useES6?: boolean = false
 }): {
   code: string,
   map: SourceMap | null
@@ -99,7 +98,7 @@ be generated (also passed to
 [transform-dwayne-html](https://github.com/dwaynejs/transform-dwayne-html)
 and [transform-dwayne-js-expressions](https://github.com/dwaynejs/transform-dwayne-js-expressions)).
 * `options.indent` (default: `2`): output indent string. Number means
-that many spaces.
+that many spaces. Also passed to [transform-dwayne-html](https://github.com/dwaynejs/transform-dwayne-html).
 * `options.useES6` (default: `false`): whether ES6 should be used in
 the output rather than ES5: `let` instead of `var`, arrow functions
 instead of usual functions. It's recommended setting this option to

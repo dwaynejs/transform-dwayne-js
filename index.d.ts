@@ -10,7 +10,7 @@ export interface Options {
   sourceMap?: boolean;
   inputSourceMap?: SourceMap | null;
   filename?: string;
-  indent?: number | 'string';
+  indent?: number | string;
   useES6?: boolean;
 }
 
