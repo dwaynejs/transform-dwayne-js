@@ -1,7 +1,7 @@
 export interface Options {
   unscopables?: string[];
   transformEmbeddedHtml?: boolean;
-  transformEmbeddedScopelessHtml?: boolean;
+  transformEmbeddedHtmlScopeless?: boolean;
   transformEmbeddedJs?: boolean;
   transformJsx?: boolean;
   taggedHtmlFuncName?: string;

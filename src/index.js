@@ -12,7 +12,7 @@ module.exports = (source, options) => {
 
   options.unscopables = _.get(options, 'unscopables', ['require']);
   options.transformEmbeddedHtml = !!_.get(options, 'transformEmbeddedHtml', true);
-  options.transformEmbeddedScopelessHtml = !!_.get(options, 'transformEmbeddedScopelessHtml', true);
+  options.transformEmbeddedHtmlScopeless = !!_.get(options, 'transformEmbeddedHtmlScopeless', true);
   options.transformEmbeddedJs = !!_.get(options, 'transformEmbeddedJs', true);
   options.transformJsx = !!_.get(options, 'transformJsx', false);
   options.taggedHtmlFuncName = _.get(options, 'taggedHtmlFuncName', 'html');

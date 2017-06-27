@@ -1,6 +1,6 @@
 {
   "name": "transform-dwayne-js",
-  "version": "5.0.3",
+  "version": "5.0.4",
   "main": "lib/index.js",
   "typings": "index.d.ts",
   "devDependencies": {

@@ -66,7 +66,7 @@ module.exports = (code, options) => {
           || expressions.length
           || (
             (name !== taggedHtmlFuncName || !options.transformEmbeddedHtml)
-            && (name !== taggedHtmlScopelessFuncName || !options.transformEmbeddedScopelessHtml)
+            && (name !== taggedHtmlScopelessFuncName || !options.transformEmbeddedHtmlScopeless)
             && (name !== taggedJsFuncName || !options.transformEmbeddedJs)
           )
         ) {

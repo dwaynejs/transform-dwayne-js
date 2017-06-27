@@ -60,7 +60,7 @@ console.log(transformDwayneJs(js));
 transformDwayneJs(code: string, options?: {
   unscopables?: string[] = ['require'],
   transformEmbeddedHtml?: boolean = true,
-  transformEmbeddedScopelessHtml?: boolean = true,
+  transformEmbeddedHtmlScopeless?: boolean = true,
   transformEmbeddedJs?: boolean = true,
   transformJsx?: boolean = false,
   taggedHtmlFuncName?: string = 'html',
@@ -92,7 +92,7 @@ Dwayne user options:
 
 * `options.transformEmbeddedHtml` (default: `true`): whether to
 transform html tagged expressions (see the examples below).
-* `options.transformEmbeddedScopelessHtml` (default: `true`): whether
+* `options.transformEmbeddedHtmlScopeless` (default: `true`): whether
 to transform scopeless html tagged expressions (see the examples below).
 * `options.transformEmbeddedJs` (default: `true`): whether to
 transform js tagged expressions (see the examples below).
