@@ -85,6 +85,7 @@ module.exports = (code, options) => {
       const transformerOpts = _.assign({}, options, {
         sourceType: 'embed',
         inputSourceMap: null,
+        jsxMode: isJsx,
         startLine: startLocation.line + 1,
         startColumn: startLocation.column,
         startPosition: expressionStart,
