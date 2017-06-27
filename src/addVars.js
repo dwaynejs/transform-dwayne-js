@@ -87,27 +87,16 @@ module.exports = (code, options) => {
         inputSourceMap: null,
         startLine: startLocation.line + 1,
         startColumn: startLocation.column,
+        startPosition: expressionStart,
         tmplVarName,
         mixinVarName,
         thisVarName,
         keepScope
       });
-      let transformed;
-
-      try {
-        const transformer = isTagged && tag.name === taggedJsFuncName
-          ? transformDwayneJs
-          : transformDwayneHtml;
-
-        transformed = transformer(value, transformerOpts);
-      } catch (err) {
-        /* istanbul ignore if */
-        if (typeof err.pos !== 'number') {
-          throw err;
-        }
-
-        throwError(err, expressionStart, options);
-      }
+      const transformer = isTagged && tag.name === taggedJsFuncName
+        ? transformDwayneJs
+        : transformDwayneHtml;
+      const transformed = transformer(value, transformerOpts);
 
       if (transformed.generatedTmplVar) {
         path.scope.push({
@@ -202,21 +191,6 @@ module.exports = (code, options) => {
     nodes
   };
 };
-
-function throwError(err, position, options) {
-  err.pos = position + err.pos;
-
-  const location = options.lines.locationForIndex(err.pos);
-
-  location.line++;
-
-  err.loc = location;
-  err.message = err.message.replace(/\(\d+:\d+\)$/, () => (
-    `(${ location.line }:${ location.column })`
-  ));
-
-  throw err;
-}
 
 function parseCode(code, options) {
   return parse(code, {
