@@ -90,6 +90,20 @@ Plugins options:
 
 Dwayne user options:
 
+* `options.transformEmbeddedHtml` (default: `true`): whether to
+transform html tagged expressions (see the examples below).
+* `options.transformEmbeddedScopelessHtml` (default: `true`): whether
+to transform scopeless html tagged expressions (see the examples below).
+* `options.transformEmbeddedJs` (default: `true`): whether to
+transform js tagged expressions (see the examples below).
+* `options.transformJsx` (default: `false`): whether to transform jsx
+expressions (see the examples below).
+* `options.taggedHtmlFuncName` (default: `html`): function name for
+tagged html expressions.
+* `options.taggedHtmlScopelessFuncName` (default: `htmlScopeless`):
+function name for tagged scopeless html expressions.
+* `options.taggedJsFuncName` (default: `js`): function name for
+tagged js expressions.
 * `options.unscopables` (default: `['require']`): passed to
 [transform-dwayne-html](https://github.com/dwaynejs/transform-dwayne-html)
 and [transform-dwayne-js-expressions](https://github.com/dwaynejs/transform-dwayne-js-expressions).
