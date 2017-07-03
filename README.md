@@ -157,7 +157,7 @@ const tmpl = (_tmpl = [
     args: {
       "Class:active": (_mixin = function (_) {
         return _.active;
-      }, _mixin.mixin = Class, _mixin)
+      }, _mixin.mixin = Class, _mixin.__source = "source.js:2:7", _mixin)
     },
     children: [
       {
@@ -208,7 +208,7 @@ function getTemplate() {
       args: {
         "Class:active": (_mixin = function () {
           return active;
-        }, _mixin.mixin = Class, _mixin)
+        }, _mixin.mixin = Class, _mixin.__source = "source.js:3:9", _mixin)
       },
       children: [
         {
@@ -272,7 +272,7 @@ const tmpl = (_tmpl = [
     args: {
       "Class:active": (_mixin = function (_) {
         return _.active;
-      }, _mixin.mixin = Class, _mixin)
+      }, _mixin.mixin = Class, _mixin.__source = "source.js:2:7", _mixin)
     },
     children: [
       {

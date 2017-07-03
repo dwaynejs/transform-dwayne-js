@@ -7,7 +7,7 @@ class Block1 extends Block {
     {
       type: "div",
       args: {
-        "Class:active": (_mixin = _ => _.active, _mixin.mixin = Class, _mixin),
+        "Class:active": (_mixin = _ => _.active, _mixin.mixin = Class, _mixin.__source = "source.js:6:6", _mixin),
         attribute: ""
       }
     }
