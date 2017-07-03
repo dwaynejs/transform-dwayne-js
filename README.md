@@ -163,11 +163,7 @@ const tmpl = (_tmpl = [
       {
         type: Block,
         args: {
-          __source: {
-            file: "source.js",
-            line: 3,
-            column: 5
-          }
+          __source: "source.js:3:5"
         },
         children: [
           {
@@ -218,11 +214,7 @@ function getTemplate() {
         {
           type: Block,
           args: {
-            __source: {
-              file: "source.js",
-              line: 4,
-              column: 7
-            }
+            __source: "source.js:4:7"
           },
           children: [
             {
@@ -286,11 +278,7 @@ const tmpl = (_tmpl = [
       {
         type: Block,
         args: {
-          __source: {
-            file: "source.js",
-            line: 3,
-            column: 5
-          }
+          __source: "source.js:3:5"
         },
         children: [
           {

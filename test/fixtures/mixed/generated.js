@@ -33,32 +33,20 @@ class App extends Block {
     {
       type: Children,
       args: {
-        __source: {
-          file: "source.js",
-          line: 22,
-          column: 5
-        }
+        __source: "source.js:22:5"
       },
       children: [
         {
           type: If,
           args: {
             if: _ => _.args.condition,
-            __source: {
-              file: "source.js",
-              line: 23,
-              column: 7
-            }
+            __source: "source.js:23:7"
           },
           children: [
             {
               type: Block1,
               args: {
-                __source: {
-                  file: "source.js",
-                  line: 24,
-                  column: 9
-                }
+                __source: "source.js:24:9"
               }
             }
           ]
@@ -67,21 +55,13 @@ class App extends Block {
           type: If,
           args: {
             if: _ => !_.args.condition,
-            __source: {
-              file: "source.js",
-              line: 26,
-              column: 7
-            }
+            __source: "source.js:26:7"
           },
           children: [
             {
               type: Block2,
               args: {
-                __source: {
-                  file: "source.js",
-                  line: 27,
-                  column: 9
-                }
+                __source: "source.js:27:9"
               }
             }
           ]
@@ -98,11 +78,7 @@ initApp([
     type: App,
     args: {
       condition: () => value,
-      __source: {
-        file: "source.js",
-        line: 35,
-        column: 23
-      }
+      __source: "source.js:35:23"
     }
   }
 ], find('.root'));
