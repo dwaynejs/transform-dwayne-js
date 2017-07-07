@@ -7,7 +7,7 @@ class Block1 extends Block {
     {
       type: "div",
       args: {
-        "Class:active": (_mixin = _ => _.active, _mixin.mixin = Class, _mixin.__source = "source.js:6:6", _mixin),
+        "Class:active": (_mixin = _ => _.active, _mixin.mixin = Class, _mixin.__source = "source.js:6:7", _mixin),
         attribute: ""
       }
     }
@@ -33,20 +33,20 @@ class App extends Block {
     {
       type: Children,
       args: {
-        __source: "source.js:22:5"
+        __source: "source.js:22:6"
       },
       children: [
         {
           type: If,
           args: {
             if: _ => _.args.condition,
-            __source: "source.js:23:7"
+            __source: "source.js:23:8"
           },
           children: [
             {
               type: Block1,
               args: {
-                __source: "source.js:24:9"
+                __source: "source.js:24:10"
               }
             }
           ]
@@ -55,13 +55,13 @@ class App extends Block {
           type: If,
           args: {
             if: _ => !_.args.condition,
-            __source: "source.js:26:7"
+            __source: "source.js:26:8"
           },
           children: [
             {
               type: Block2,
               args: {
-                __source: "source.js:27:9"
+                __source: "source.js:27:10"
               }
             }
           ]
@@ -78,7 +78,7 @@ initApp([
     type: App,
     args: {
       condition: () => value,
-      __source: "source.js:35:23"
+      __source: "source.js:35:24"
     }
   }
 ], find('.root'));

@@ -5,7 +5,7 @@ const tmpl = [
       {
         type: Block,
         args: {
-          __source: "source.js:3:5"
+          __source: "source.js:3:6"
         },
         children: [
           {

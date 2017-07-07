@@ -4,7 +4,7 @@ const tmpl = (_tmpl = [
   {
     type: "div",
     args: {
-      Mixin: (_mixin = () => true, _mixin.mixin = Mixin, _mixin.__source = "source.js:2:7", _mixin)
+      Mixin: (_mixin = () => true, _mixin.mixin = Mixin, _mixin.__source = "source.js:2:8", _mixin)
     },
     children: [
       {
